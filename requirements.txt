@@ -1,0 +1,9 @@
+rasa
+tensorflow
+spacy
+transformers
+pinecone-client
+langchain
+fastapi
+prometheus-client
+docker

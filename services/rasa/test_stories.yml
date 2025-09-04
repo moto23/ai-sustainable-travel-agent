@@ -1,0 +1,40 @@
+version: "3.1"
+
+stories:
+- story: Test happy path plan trip
+  steps:
+  - user: |-
+      Hi
+    intent: greet
+  - action: utter_greet
+  - user: |-
+      I want to plan a trip to Paris on 2023-09-15
+    intent: plan_trip
+    entities:
+      - location: Paris
+      - date: 2023-09-15
+  - action: utter_plan_trip
+
+- story: Test fallback scenario
+  steps:
+  - user: |-
+      Blah blah
+    intent: nlu_fallback
+  - action: utter_default
+
+- story: Test multi-turn with weather and transport
+  steps:
+  - user: |-
+      I want to plan a trip to Berlin
+    intent: plan_trip
+    entities:
+      - location: Berlin
+  - action: utter_plan_trip
+  - user: |-
+      What's the weather like?
+    intent: weather_query
+  - action: utter_weather_query
+  - user: |-
+      What are my transport options?
+    intent: transport_options
+  - action: utter_transport_options

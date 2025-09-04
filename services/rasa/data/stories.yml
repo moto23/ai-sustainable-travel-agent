@@ -1,0 +1,43 @@
+version: "3.1"
+
+
+stories:
+- story: Full conversation flow with follow-up
+  steps:
+  - intent: ask_weather
+    entities:
+    - location: "Tokyo"
+  - action: action_get_weather       # Bot gives weather and suggests places
+  - intent: affirm
+  - action: action_find_places        # Bot uses context to find hotels in Tokyo
+  - intent: inform_preference
+    entities:
+    - preference: "budget"
+  - action: action_find_places        # Bot refines search for budget hotels
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+- story: Location disambiguation
+  steps:
+  - intent: ask_places
+    entities:
+    - location: "London"
+    - place_type: "museums"
+  - action: action_disambiguate_location # Bot asks for clarification
+  - intent: inform
+    entities:
+    - location: "London, UK"
+  - action: action_find_places          # Bot finds museums in London, UK
+
+
+- story: Two-step place search
+  steps:
+  - intent: ask_places
+    entities:
+    - place_type: "vegan restaurants"
+  - action: action_find_places          # Bot asks for location
+  - intent: inform
+    entities:
+    - location: "Paris"
+  - action: action_find_places          # Bot finds restaurants in Paris

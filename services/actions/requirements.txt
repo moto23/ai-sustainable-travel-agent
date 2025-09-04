@@ -1,0 +1,8 @@
+rasa
+rasa-sdk
+requests
+pandas
+spacy
+transformers
+torch
+accelerate

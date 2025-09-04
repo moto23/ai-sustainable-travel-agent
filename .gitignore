@@ -1,0 +1,76 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual Environments
+.env
+.venv
+venv/
+ENV/
+.env.*
+rasa-main-env/ # ✅ THE MISSING LINE
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# VSCode
+.vscode/
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Data/ML
+*.h5
+*.hdf5
+*.ckpt
+*.pth
+*.pt
+*.tflite
+*.onnx
+*.pb
+*.npz
+*.npy
+*.csv
+*.tsv
+*.sqlite3
+*.db
+.DS_Store
+
+# System
+Thumbs.db
+Desktop.ini
+
+# Rasa
+models/
+results/
+.rasa/# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Virtual Environments
+.env
+.venv
+venv/
+ENV/
+rasa-main-env/
+
+# IDE / Editor folders
+.vscode/
+.idea/
+
+# Rasa files
+models/
+results/
+.rasa/
+
+# System / Other
+.DS_Store
+Thumbs.db
+Desktop.ini

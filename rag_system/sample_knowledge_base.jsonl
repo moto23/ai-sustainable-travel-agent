@@ -1,0 +1,11 @@
+{"text": "EcoStay Hotel in Berlin offers solar-powered rooms and organic breakfast.", "metadata": {"location": "Berlin", "category": "eco_hotel", "sustainability_score": 92}, "source": "sample"}
+{"text": "GreenWheels car sharing in Amsterdam reduces emissions for city travelers.", "metadata": {"location": "Amsterdam", "category": "green_transport", "sustainability_score": 88}, "source": "sample"}
+{"text": "OffsetMyTrip provides carbon offset programs for flights worldwide.", "metadata": {"location": "Global", "category": "carbon_offset", "sustainability_score": 95}, "source": "sample"}
+{"text": "EcoBike Tours in Copenhagen offer guided city tours on electric bikes.", "metadata": {"location": "Copenhagen", "category": "green_transport", "sustainability_score": 90}, "source": "sample"}
+{"text": "GreenLeaf Hostel in Lisbon uses rainwater harvesting and composting toilets.", "metadata": {"location": "Lisbon", "category": "eco_hotel", "sustainability_score": 89}, "source": "sample"}
+{"text": "SolarBus in Barcelona is a fully electric public transport option.", "metadata": {"location": "Barcelona", "category": "green_transport", "sustainability_score": 91}, "source": "sample"}
+{"text": "EcoLodge Paris is certified by Green Key for sustainable practices.", "metadata": {"location": "Paris", "category": "eco_hotel", "sustainability_score": 93}, "source": "sample"}
+{"text": "Treehouse Retreat in Stockholm offers zero-waste accommodation.", "metadata": {"location": "Stockholm", "category": "eco_hotel", "sustainability_score": 94}, "source": "sample"}
+{"text": "GreenRail in Vienna uses renewable energy for all train services.", "metadata": {"location": "Vienna", "category": "green_transport", "sustainability_score": 92}, "source": "sample"}
+{"text": "EcoOffset Zurich helps travelers offset their carbon emissions easily.", "metadata": {"location": "Zurich", "category": "carbon_offset", "sustainability_score": 96}, "source": "sample"}
+# ... (repeat and vary for 100+ entries, covering eco hotels, green transport, carbon offset programs, and more cities)

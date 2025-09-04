@@ -1,0 +1,20 @@
+[
+  {
+    "timestamp": 1754932332,
+    "total_emission": 306.0,
+    "breakdown": [
+      {
+        "mode": "flight",
+        "amount": 1200,
+        "emission": 306.0
+      }
+    ],
+    "sustainability_score": "D",
+    "offset_kg": 306.0,
+    "offset_price": 6.12,
+    "recommendations": [
+      "Consider offsetting your flight emissions or using trains for shorter distances.",
+      "Try to reduce car usage or choose eco-certified hotels."
+    ]
+  }
+]

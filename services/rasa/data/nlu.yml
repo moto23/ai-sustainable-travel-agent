@@ -1,0 +1,74 @@
+#nlu.yml
+version: "3.1"
+
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - good day
+    - hey there
+
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - thanks bye
+
+
+- intent: affirm
+  examples: |
+    - yes
+    - indeed
+    - that's right
+    - sure
+    - ok
+
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - not really
+    - I don't want that
+
+
+- intent: ask_weather
+  examples: |
+    - what's the weather like in [Sinnar](location)?
+    - tell me the forecast for [New York](location)
+    - how is the climate
+    - weather in [London](location) please
+    - do I need a jacket in [Tokyo](location)
+
+
+- intent: ask_places
+  examples: |
+    - find a [hotel](place_type) for me
+    - show me [restaurants](place_type) nearby
+    - I want to search for a [park](place_type) in [Paris](location)
+    - find [vegan food](place_type) near the [Eiffel Tower](location)
+    - can you look for [museums](place_type)
+    - I need a [cafe](place_type)
+
+
+- intent: inform
+  examples: |
+    - [Sinnar](location)
+    - how about [New York City](location)
+    - what about [London](location)
+    - [hotels](place_type)
+    - I'm looking for [restaurants](place_type)
+
+
+# ✅ NEW: For handling refinements like "something cheaper"
+- intent: inform_preference
+  examples: |
+    - how about something [cheaper](preference)
+    - find me a [budget](preference) option
+    - something more [luxurious](preference)
+    - I'd prefer a [mid-range](preference) place

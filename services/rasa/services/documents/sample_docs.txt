@@ -1,0 +1,14 @@
+Company Overview:
+Our company, TechCorp, was founded in 2020 and specializes in AI solutions.
+We have offices in New York, London, and Tokyo.
+Our main products include ChatBot Pro, AI Analytics, and Smart Automation tools.
+
+Services:
+We offer consulting services for AI implementation.
+Our support team is available 24/7 for premium customers.
+We provide training programs for businesses adopting AI technologies.
+
+Contact Information:
+Email: support@techcorp.com
+Phone: +1-555-0123
+Website: www.techcorp.com

@@ -1,0 +1,86 @@
+version: "3.1"
+
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - ask_weather
+  - ask_places
+  - inform
+  - inform_preference
+
+
+entities:
+  - location
+  - place_type
+  - preference
+
+
+slots:
+  trip_destination:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: location
+  place_type:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: place_type
+  user_preference:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: preference
+  disambiguation_options:
+    type: list
+    influence_conversation: true
+    mappings:
+      - type: custom
+  last_bot_suggestion:
+    type: text
+    mappings:
+      - type: custom
+
+
+responses:
+  # ... (your responses from the previous step are perfect and do not need to be changed)
+  utter_greet:
+    - text: "Hey there! I'm your Sustainable Travel Agent. 🌍 You can ask me for weather forecasts, hotel recommendations, and eco-friendly travel tips. Where are you thinking of going?"
+  utter_goodbye:
+    - text: "Happy to help! Have a wonderful and sustainable trip! 👋"
+  utter_ask_location:
+    - text: "Sounds exciting! What city or landmark do you have in mind?"
+  utter_ask_place_type:
+    - text: "Got it, we're looking at {trip_destination}. What kind of places are you interested in? (e.g., hotels, museums, vegan restaurants)"
+  utter_clarify_location:
+    - text: "I found a few places with that name. Which one did you mean?\n{disambiguation_options}"
+  utter_weather_report:
+    - text: "☀️ The current weather in {location} is {temp}°C with {condition}."
+  utter_places_report:
+    - text: "Here are some great {place_type} I found for you in {location}:\n\n{places_list}"
+  utter_suggest_after_weather:
+    - text: "Now that you know the weather, would you like to see some sustainable hotels in {trip_destination}?"
+  utter_suggest_after_places:
+    - text: "Great! Need me to check the weather forecast for {trip_destination} as well?"
+  utter_anything_else:
+    - text: "What else can I help you plan for your trip to {trip_destination}?"
+  utter_api_error:
+    - text: "Oh no! It seems my connection to the travel services is a bit fuzzy right now. 🛠️ Please try again in a moment."
+  utter_no_places_found:
+    - text: "Hmm, I searched far and wide but couldn't find any {place_type} in {location}. Perhaps we could try searching for something else?"
+
+
+actions:
+  - action_get_weather
+  - action_find_places
+  - action_disambiguate_location
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

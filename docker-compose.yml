@@ -1,0 +1,50 @@
+services:
+  rasa:
+    build:
+      context: ./services/rasa
+    image: prasad484/travelplanner-rasa
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./services/rasa:/app
+    env_file:
+      - .env
+    depends_on:
+      - action_server
+      - apis
+      - rag_system
+    command: /usr/local/bin/rasa run -m models --enable-api --cors "*" --endpoints endpoints.yml
+
+  action_server:
+    build:
+      context: ./services/actions
+    image: prasad484/travelplanner-action_server
+    ports:
+      - "5055:5055"
+    volumes:
+      - ./services/actions:/app
+    env_file:
+      - .env
+    command: /usr/local/bin/rasa run actions
+
+  apis:
+    build: ./apis
+    image: prasad484/travelplanner-apis
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./apis:/app
+    env_file:
+      - .env
+
+  rag_system:
+    build: ./rag_system
+    image: prasad484/travelplanner-rag_system
+    volumes:
+      - ./rag_system:/app
+    env_file:
+      - .env
+
+networks:
+  default:
+    driver: bridge
